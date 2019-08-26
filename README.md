@@ -1,6 +1,6 @@
 ## Welcome to ChemArchitect!
 
-The purpose of ChemArchitect is to overcome the nightmare of data generation for chemical application and machine learning. Whether you want need automatic generation of all permutations of ligand substitutions, input files for ab initio calculations, extraction of chemical parameters from calculation output files, or more, ChemArchitect seeks to ease your exploration of massive chemical space. All current features can be found on the [features]() page.
+The purpose of ChemArchitect is to overcome the nightmare of data generation for chemical application and machine learning. Whether you want automatic generation of all permutations of ligand substitutions, input files for ab initio calculations, extraction of chemical parameters from calculation output files, or more, ChemArchitect seeks to ease your exploration of massive chemical space. All current features can be found on the [features]() page.
 
 ### What's New!
 
@@ -13,3 +13,5 @@ ChemArchitect plans to expand as a chemical generation and machine learning tool
 ### Acknowledgements
 
 Many thanks to Malika Uteuliyeva for her contributions toward generalization and testing of this program suite.
+
+### References
