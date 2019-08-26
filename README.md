@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Welcome to ChemArchitect!
 
-You can use the [editor on GitHub](https://github.com/jfreeze95/ChemArchitect/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The purpose of ChemArchitect is to overcome the nightmare of data generation for chemical application and machine learning. Whether you want need automatic generation of all permutations of ligand substitutions, input files for ab initio calculations, extraction of chemical parameters from calculation output files, or more, ChemArchitect seeks to ease your exploration of massive chemical space. All current features can be found on the [features]() page.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### What's New!
 
-### Markdown
+ChemArchitect launches! All aspects of the program should be as genralized as possible for the launch, with specific user inputs specified and detailed [here](). Check out the [Getting Started] page for installation instructions, and read the [Documentation] for step-by-step instructions and tutorials.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Coming in the Future!
 
-```markdown
-Syntax highlighted code block
+ChemArchitect plans to expand as a chemical generation and machine learning tool. If you have ideas for feature additions, please email the head architect [here]().
 
-# Header 1
-## Header 2
-### Header 3
+### Acknowledgements
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jfreeze95/ChemArchitect/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Many thanks to Malika Uteuliyeva for her contributions toward generalization and testing of this program suite.
