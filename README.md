@@ -4,11 +4,11 @@ The purpose of ChemArchitect is to overcome the nightmare of data generation for
 
 ### What's New!
 
-ChemArchitect launches! All aspects of the program should be as genralized as possible for the launch, with specific user inputs specified and detailed [here](). Check out the [Getting Started] page for installation instructions, and read the [Documentation] for step-by-step instructions and tutorials.
+ChemArchitect launches! All aspects of the program should be as genralized as possible for the launch, with specific user inputs specified and detailed [here](https://jfreeze95.github.io/ChemArchitect/Documentation). Check out the [Getting Started](https://jfreeze95.github.io/ChemArchitect/GettingStarted) page for installation instructions, and read the [Documentation] for step-by-step instructions and tutorials.
 
 ### Coming in the Future!
 
-ChemArchitect plans to expand as a chemical generation and machine learning tool. If you have ideas for feature additions, please email the head architect [here]().
+ChemArchitect plans to expand as a chemical generation and machine learning tool. If you have ideas for feature additions, please email the head architect [here](jessica.freeze@yale.edu).
 
 ### Acknowledgements
 
