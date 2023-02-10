@@ -1,39 +1,34 @@
 #This section details the structure of all files currently in the ChemArchItect package.
-
-#ExtractInteractions.py
-#ExtractEnergies.py
-#ExtractBondOrder.py
-#ExtractProperties.py
-
-#AngleRestart_MixedLabels.py
-#AngleRestart.py
-#BasisChanger_filcreator.py
-
-#DictionaryMaker_TwoSides.py
-
-
-#MinNumPtsMaker.py
-
-#Predictor.py
-#RandInputSelect.py
-#ScriptListMaker.py
-#Separate_Train_Test.py
-#ShiftedInputCreator.py
-#SMILEToMolRDKit.py
-#SplitData.py
-#SubsetSelector.py
-#TimeOutRestarter.py
-
-
-    
+  
 #Making Many Gaussian Input Files From a List of SMILES.
 
   #Order of Operations
     #SmileToMol.py (SmileTo Mol_tester.txt for testing example)
     #Use open babel to convert .mol files to .gjf
     #FileCreator.py
+    
+  #Related Utilities
+  
+    #Select a random subset of smiles from the list you have
+        #RandInputSelect.py
+        
+    #Make train and test set files from a single dataset
+        #Separate_Train_Test.py
+        
+    #Change the Route Card details for already made Gaussian input files
+        #BasisChanger_filcreator.py
+        
+    #Create files with shifted atomic cartesian coordinates from existing atomic coordinates
+        #ShiftedInputCreator.py
 
 #Utilities to Speed Up Gaussian Job Submission and Fixing
+
+    #Make new input files for files that underwent a TIMEOUT failure.
+        #TimeOutRestarter.py
+        
+    #Make new input files for files that failed due to a bad angle.
+        #AngleRestart_MixedLabels.py
+        #AngleRestart.py
 
 #Making Input for Machine Learning
 
@@ -49,4 +44,17 @@
     #Angular Arcs Dictionary
     #DictionaryMaker_AA.py
     
- #Extracting Encoded Interactions for Machine Learning Input
+  #Extracting Encoded Interactions for Machine Learning Input
+ 
+    #ExtractInteractions.py
+    
+  #Extraction of Energies and Computed Properties
+  
+    #ExtractEnergies.py
+    #ExtractBondOrder.py
+    #ExtractProperties.py
+
+#Analysis Tools for Already Trained Models
+
+    #Predict the energies for a new dataset on a trained model
+        #Predictor.py
