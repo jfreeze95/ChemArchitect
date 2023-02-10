@@ -1,0 +1,52 @@
+#This section details the structure of all files currently in the ChemArchItect package.
+
+#ExtractInteractions.py
+#ExtractEnergies.py
+#ExtractBondOrder.py
+#ExtractProperties.py
+
+#AngleRestart_MixedLabels.py
+#AngleRestart.py
+#BasisChanger_filcreator.py
+
+#DictionaryMaker_TwoSides.py
+
+
+#MinNumPtsMaker.py
+
+#Predictor.py
+#RandInputSelect.py
+#ScriptListMaker.py
+#Separate_Train_Test.py
+#ShiftedInputCreator.py
+#SMILEToMolRDKit.py
+#SplitData.py
+#SubsetSelector.py
+#TimeOutRestarter.py
+
+
+    
+#Making Many Gaussian Input Files From a List of SMILES.
+
+  #Order of Operations
+    #SmileToMol.py (SmileTo Mol_tester.txt for testing example)
+    #Use open babel to convert .mol files to .gjf
+    #FileCreator.py
+
+#Utilities to Speed Up Gaussian Job Submission and Fixing
+
+#Making Input for Machine Learning
+
+  #Making Encoding Dictionaries For Machine Learning Input
+  ##Encoding Dictionaries detail what each feature column refers to.
+  
+    #Spherical Radii Dictionary
+    #DictionaryMaker_SR.py
+  
+    #Diherdral Arcs Dictionary
+    #DictionaryMaker_DA.py
+    
+    #Angular Arcs Dictionary
+    #DictionaryMaker_AA.py
+    
+ #Extracting Encoded Interactions for Machine Learning Input
