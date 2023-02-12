@@ -27,7 +27,7 @@
         #TimeOutRestarter.py
         
     #Make new input files for files that failed due to a bad angle.
-        #AngleRestart.py
+        #AngleRestarter.py
 
 #Making Input for Machine Learning
 
