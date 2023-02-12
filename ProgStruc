@@ -16,7 +16,7 @@
         #Separate_Train_Test.py
         
     #Change the Route Card details for already made Gaussian input files
-        #BasisChanger_filcreator.py
+        #BasisChanger_FileCreator.py
         
     #Create files with shifted atomic cartesian coordinates from existing atomic coordinates
         #ShiftedInputCreator.py
@@ -27,7 +27,6 @@
         #TimeOutRestarter.py
         
     #Make new input files for files that failed due to a bad angle.
-        #AngleRestart_MixedLabels.py
         #AngleRestart.py
 
 #Making Input for Machine Learning
