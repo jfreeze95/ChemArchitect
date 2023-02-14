@@ -5,12 +5,11 @@
 <h3>Making Many Gaussian Input Files From a List of SMILES.</h3>
 
   <h4>Order of Operations</h4>
-    #SmileToMol.py (SmileTo Mol_tester.txt for testing example)
-    #Use open babel to convert .mol files to .gjf
-    #FileCreator.py
+    <li>SmileToMol.py (SmileTo Mol_tester.txt for testing example)</li>
+    <li>Use open babel to convert .mol files to .gjf</li>
+    <li>FileCreator.py</li>
     
   <h4>Related Utilities</h4>
-  
     <h5>Select a random subset of smiles from the list you have
         RandInputSelect.py
         
@@ -24,7 +23,6 @@
         #ShiftedInputCreator.py</h5>
 
 <h3>Utilities to Speed Up Gaussian Job Submission and Fixing</h3>
-
     <h4>Make new input files for files that underwent a TIMEOUT failure.
         #TimeOutRestarter.py
         
@@ -46,11 +44,9 @@
     #DictionaryMaker_AA.py</h5>
     
   <h4>Extracting Encoded Interactions for Machine Learning Input</h4>
- 
     <h5>ExtractInteractions.py</h5>
     
   <h4>Extraction of Energies and Computed Properties</h4>
-  
     <h5>ExtractEnergies.py
     ExtractBondOrder.py
     ExtractProperties.py</h5>
