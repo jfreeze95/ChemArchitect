@@ -1,0 +1,8 @@
+<h1>Tutorial</h1>
+
+<h2>Introduction</h2>
+ChemArchItect is a software package designed to make the dataset generation of computational chemical data easier for those wishing to utilize machine learning for chemistry. Included therefore, are programs to generate initial structures, create input files for ab initio software, sub-divide your dataset, prepare files for submission and resubmission, and extract features and outputs from input and output files. All of these files will be outlined in this tutorial, with detailing of dependences and potential improvements/limitations of the code. As with any codebase, development and collaboration is encouraged. If anyone wishes to add to the ChemArchItect package, please utilize the standard Github features do so.
+
+<h2>Making Many Gaussian Input Files From a List of SMILES.</h2>
+In this section it is detailed how to take a list of SMILES molecules and make Gaussian input files that are ready to be submitted. First and foremost, a SMILES molecule is a way to describe a molecule in a one-dimensional string. While the three dimensional representations generated from SMILES structures may be slightly different depending on the table of bond lengths the 1D-3D generator is using, the SMILES format remains a compact and reliable way to communicate and generate molecular structure. An example of SMILES being converted to 3D is shown in Figure 1.
+![Figure 1. Depiction of a 1D SMILES string and its 3D counterpart.](https://github.com/jfreeze95/ChemArchitect/blob/023d02da5645215e04e6f8fbc1c24d2997f0ddc5/SMILESEx.png) Figure 1. Depiction of a 1D SMILES string and its 3D counterpart.
