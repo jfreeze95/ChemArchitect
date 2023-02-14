@@ -37,14 +37,14 @@ AngleRestarter.py</h4>
 <h4>Making Encoding Dictionaries For Machine Learning Input</h4>
 <h5>Encoding Dictionaries detail what each feature column refers to.<\h5>
   
-  <h6>Spherical Radii Dictionary</h6>
+<h5>Spherical Radii Dictionary</h5>
 DictionaryMaker_SR.py
   
-<h6>Diherdral Arcs Dictionary</h6>
+<h5>Diherdral Arcs Dictionary</h5>
 DictionaryMaker_DA.py
     
-<h6>Angular Arcs Dictionary</h6>
-DictionaryMaker_AA.py<
+<h5>Angular Arcs Dictionary</h5>
+DictionaryMaker_AA.py
     
 <h4>Extracting Encoded Interactions for Machine Learning Input</h4>
 ExtractInteractions.py
