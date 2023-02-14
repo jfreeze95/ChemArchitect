@@ -1,12 +1,12 @@
-#Getting Started
+<h1>Getting Started</h1>
 
 The current setup assumes you are using Gaussian files. Future features may include options for all major file input types. Make a request to speed up the code for your favorite file type.
 
-##Installation
+<h2>Installation</h2>
 
 If you are unfamiliar with installation of programs using [pip](https://pip.pypa.io/en/stable/installation/) or [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html), it is recommended that you familiarize yourself with these utilities first.
 
-###Dependencies: <br>
+<h3>Dependencies:</h3> <br>
 1.Python 3<br>
     &ensp;&ensp;See how to install [Python 3 here](https://realpython.com/installing-python/).<br>
     &ensp;&ensp;Python 3.6.5 and 3.9.0 have been tested extensively. <br>
