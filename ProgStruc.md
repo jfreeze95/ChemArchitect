@@ -35,7 +35,7 @@
 <h3>Making Input for Machine Learning</h3>
 
 <h4>Making Encoding Dictionaries For Machine Learning Input</h4>
-<h5>Encoding Dictionaries detail what each feature column refers to.<\h5>
+Encoding Dictionaries detail what each feature column refers to.
   
 <h5>Spherical Radii Dictionary</h5>
 &emsp;DictionaryMaker_SR.py
