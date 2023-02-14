@@ -27,10 +27,10 @@
 
 <h3>Utilities to Speed Up Gaussian Job Submission and Fixing</h3>
 <h4>Make new input files for files that underwent a TIMEOUT failure.</h4>
-  TimeOutRestarter.py
+    TimeOutRestarter.py
         
 <h4>Make new input files for files that failed due to a bad angle.</h4>
-  AngleRestarter.py</h4>
+    AngleRestarter.py</h4>
 
 <h3>Making Input for Machine Learning</h3>
 
