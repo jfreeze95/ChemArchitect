@@ -6,7 +6,9 @@
 
   <h4>Order of Operations</h4>
     1. SmileToMol.py (SmileTo Mol_tester.txt for testing example)
+    
     2. Use open babel to convert .mol files to .gjf
+    
     3. FileCreator.py
     
   <h4>Related Utilities</h4>
