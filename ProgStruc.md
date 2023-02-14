@@ -5,9 +5,9 @@
 <h3>Making Many Gaussian Input Files From a List of SMILES.</h3>
 
   <h4>Order of Operations</h4>
-    <li>SmileToMol.py (SmileTo Mol_tester.txt for testing example)</li>
-    <li>Use open babel to convert .mol files to .gjf</li>
-    <li>FileCreator.py</li>
+    1. SmileToMol.py (SmileTo Mol_tester.txt for testing example)
+    2. Use open babel to convert .mol files to .gjf
+    3. FileCreator.py
     
   <h4>Related Utilities</h4>
     <h5>Select a random subset of smiles from the list you have
