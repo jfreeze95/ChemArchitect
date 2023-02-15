@@ -62,3 +62,16 @@ Figure 2. Example output from running the Obabel command.</center</p>
 Now you have successfully made files structured for Gaussian input.
   
   <h2>Adding Route Card Specifications Programatically</h2>
+ 
+The next step is to add calculation specifications to the route card and end of the input file. This part currently requires a bit of hardcoding in FileCreator.py as it was decided this would be the easiest for users. So the first step is to make a copy of  FileCreator.py with a slightly different name. In the new file, find the lines that set data[0] through data[4]. These correspond to the route card, file descriptor line, and charge and multiplicity line. Adjust the values in these lines to your desired specifications. Note that \n is the python newline specifier and %% will write a single percent sign. <br>
+data[0] contains processor and memory specs, checkpoint file name, and the route card. <br>
+data[1] is a necessary blank line
+data[2] is the file descriptor which does not impact the running of the calculation
+data[3] is a necessary blank line
+data[4] contains the charge and multiplicity which are specified when the program is run through user input
+ <br><br>
+If you would like to simplify your user input you can toggle the commenting of the user input and hard code option lines for charge and multiplicity. Your user input will include additional file descriptors you would like to add to the filename, whether your file extension is .gjf or .com, and the index in your filename that contains the file ID. As an example to explain what is name by filename index, a filename such as chg_pos_1_mult_2_QuartDgdzvp_0012.gjf would have it's identifier (0012) at index 6 because the program splits on underscores. The program will remove the extension if it is connected to the ID. Pseudopotentials can also be added to the file through uncommenting the pseudopotenial section or following to format of that section to include your desired after atomic coordinate lines.
+<br><br>
+Be aware that this operation overwrites the previous .gjf or .com files and mistakes may require regeneration of the base files. However, regardless of the number of reruns, the file will overwrite on running so as long as the only mistakes were in the first five lines and not in the atomic coordinates, then overwriting by rerunning the program with fixed specifications will acceptably fix the mistake. Also, since the name of the file is being changed, the filename index will change if you rerun the program on the same files. 
+ 
+Congratulations! You now have files ready to submit to Gaussian!
