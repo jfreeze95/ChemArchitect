@@ -75,3 +75,43 @@ If you would like to simplify your user input you can toggle the commenting of t
 Be aware that this operation overwrites the previous .gjf or .com files and mistakes may require regeneration of the base files. However, regardless of the number of reruns, the file will overwrite on running so as long as the only mistakes were in the first five lines and not in the atomic coordinates, then overwriting by rerunning the program with fixed specifications will acceptably fix the mistake. Also, since the name of the file is being changed, the filename index will change if you rerun the program on the same files. Each filename will be printed out with a warning so that if the file is too big to be held in memory you know its identity and can either adjust the file or request a new way to handle the files from the ChemArchItect developers.
  
 Congratulations! You now have files ready to submit to Gaussian!
+
+ 
+ <h2>Related Utilities</h2>
+ 
+ The next section details additional utilities that will assist in tasks related to preparing Gaussian input files from SMILES.
+ 
+ <h3>Select a random subset of SMILES from the list you have</h3>
+ The RandInputSelect.py program will select a random subset of SMILES from a list of SMILES based a ratio given by the user. As an example, if you would like 20% of the data in your new file then you would input 5 as in 1 in 5. If you submit a float or double then it will be truncated to an interger following python integer casting rules. This program will make a new file unless the same name is given as the old file.
+ 
+ <h3>Make train and test set files from a single dataset</h3>
+ The Separate_Train_Test.py program will split one file into two new files based on the percentage of the data you would like to set aside for training. This file is useful because it makes a permanent split of training and testing data unlike the on-the-fly utilities in sklearn which impermanently split a dataset and require additional code to save the split. This program therefore allows you to analyze how the data split and determine if there are any biases in the split. The program will request the filename of the file to be split and the percentage you would like to use for training. It will output two files with the _train and _test suffixes added to the names. This file works wit any stage of file so long as the entire datapoint is specified on a single line. As an example, lists of smiles or lists of featurized datapoints will work, while Gaussian input files will not.
+ 
+ <h3>Change the Route Card details for already made Gaussian input files</h3>
+ The BasisChanger_FileCreator.py program is very similar to FileCreator.py but simpler in it's design as it only seeks to change the first five lines of the input file and add any specifiers to the end of the file. All route card details besides the extension are specified through hardcoding.
+ 
+ <h3>Create files with shifted atomic cartesian coordinates from existing atomic coordinates</h3>
+ The ShiftedInputCreator.py program is used for the generation of input files with atom positions that are slightly and randomly shifted from the original input file. This is useful for creating non-optimized molecules. Be aware that there are no features in the program to prevent atom overlapping, and that the main avoidance of this error is implicit through the size of the shift the user requests. This however does mean that "atom to close" errors may arise when the new files are run by Gaussian. Just like the previous "Creator" files, the route card is specified via hardcoding, so making a copy of the file is recommended. After asking the user for the usual "Creator" questions, the user if prompted for the percentage of atoms in a molecule they would like to see shifted and what the maximum shift in angstroms they would like tho occur. Files are not overwritten unless no additional identifier for the filename is given.
+ 
+ <h2>Utilities to Speed Up Gaussian Job Submission and Fixing</h2>
+ The next batch of programs are designed to make restarting failed Gaussian calculations faster.
+ <h3>Make new input files for files that underwent a TIMEOUT failure.</h3>
+ The TimeOutRestarter.py program is designed to make new input files from optimization log files that ran out of cluster time using the restart option in Gaussian. To get the list of timed out files, follow the instructions on [this link](https://www.makeuseof.com/tag/use-downloaded-gmail-data/) after making a filter in your gmail to send all jobs with TIMEOUT to a single mail folder. Name your .mbox folder TIMEOUT.mbox or else change the name in the TimeOutRestarter.py program. <br><br>
+ The input and output file need to be in the same folder for this program to work. Alternatively, and more reasonably, Obabel can be used to make a new input file with the updated coordinates from your optimization using the following command.
+       
+      
+      obabel -m -ilog *.log -ogjf *.gjf
+      
+      
+Use this command carefully so that you don't overwrite your original input file. If you don't want to use the restart command in Gaussian then you can run the above OBabel command with "*r.gjf" instead of "*.gjf" and then use BasisChanger_FileCreator.py to update the route card.<br><br>
+ 
+ When the program is run, the user is asked for a string that exists in all of the files to assist in finding the line of the mbox file with the titles. Using the additional filename identifier that you input for "Creator" files is an easy choice. The file then asks how many characters come before the identifier in the title. If your identifier is at the beginning then the answer will be 6 because every filename in the mbox has " Name=" in front. For example: " Name=[Ru]" has six for ' Name=' with an identifier of [Ru].
+ <br><br> 
+ The program will then search for the files with those names. It will put the names of all files it finds in your current directory in one file, and files it can't find in another file. You can then run this program in other folders with the shortened list of yet unhandled files to find the rest. New files will be generated with an "r" added to the end of the filename. Update the route card specification in the program to your specifications, importantly leaving the "restart" keyword in the opt specifications.
+ <br><br>TIMEOUT.mbox is provided for testing.
+ 
+ <h3>Make new input files for files that failed due to a bad angle.</h3>
+ The AngleRestarter.py program is very similar in its requirements as TimeOutRestarter.py. Write the mailbox file to FAILED.mbox. This program will handle angle and dihedral errors, as well as "atoms too close" errors and additional miscellaneous errors by separating the lists of files into different files for each type of error.
+ 
+ <h2>Making Input for Machine Learning</h2>
+ 
