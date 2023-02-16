@@ -114,4 +114,25 @@ Use this command carefully so that you don't overwrite your original input file.
  The AngleRestarter.py program is very similar in its requirements as TimeOutRestarter.py. Write the mailbox file to FAILED.mbox. This program will handle angle and dihedral errors, as well as "atoms too close" errors and additional miscellaneous errors by separating the lists of files into different files for each type of error.
  
  <h2>Making Input for Machine Learning</h2>
+ <h3>Making Encoding Dictionaries For Machine Learning Input</h3>
+ Dictionaries detail the what each feature column of the encoding means.
+ <br><br>
+ <bf>Spherical Radii Dictionary</bf>
+ The DictionaryMaker_SR.py program makes the dictionary for Spherical Radii at a given granularity and for a set of elements. This encoding describes pairwise interactions between any two atoms of the given elements at distance ranges specified by the granularity and range. The file has three specifiers, two of which, the elements and granularity, are easier to adjust in the hardcoding, and the name of the dictionary file which is requested from the user upon running. The elements are specified in an array that can be updates. The granularity, in Angstroms, is specified in a range function command, where the start, end, and step size between those two points are specified. The dictionary is formed such that no reversibly identical permutations are included in the list, ie H-C-1.8 and C-H-1.8 are the same so only the entry with whichever atom that comes first in the element array first is in the dictionary.
+
+  <br><br>
+ <bf>Angular Arc Dictionary</bf>
+ The DictionaryMaker_AA.py program is just like the dictionary for Spherical Radii, but for angles formed between three atoms. Angles are specified by degrees and kept between 0 and 180 as above 180 the measurement becomes one of convention and dihedrals handle chirality. Reversibly identical permutations are again limited to 1 case per dictionary. An example would be C-H-B-20 and B-H-C-20 are the same but C-B-H-20 is not.
  
+  <br><br>
+ <bf>Dihedral Arc Dictionary</bf>
+ The DictionaryMaker_DA.py program is just like the dictionary for Spherical Radii, but for dihedrals formed between four atoms. Dihedrals are specified by degrees and kept between 0 and 180 as above 180 the measurement becomes one of convention. Reversibly identical permutations are again limited to 1 case per dictionary. An example would be C-H-F-B-20 and B-F-H-C-20 are the same but C-F-H-B-20 is not.
+ <br><br>
+  <h3>Extracting Encoded Interactions for Machine Learning Input</h3>
+ 
+  <br><br>
+  <h3>Extraction of Energies and Computed Properties</h3>
+ The ExtractInteractions.py program is designed to extract a wide array of interactions between atoms from coordinates input files. Of course, because we often want optimized coordinates, these input files are best obtained by performing the OBabel commands to convert log files to gjf or com files are previously specified above in the Timeout Restarter section. 
+  <h2>Analysis Tools for Already Trained Models</h2>
+   <br><br>
+  <h3>Predict the energies for a new dataset on a trained model</h3>
