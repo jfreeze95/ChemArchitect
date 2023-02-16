@@ -54,7 +54,6 @@ Encoding Dictionaries detail what each feature column refers to.
 &emsp;ExtractAnglesAndInts_Sep5Deg_Portion_SepPt1_Portion.py<br>
     
 <h4>Extraction of Energies and Computed Properties</h4>
-&emsp;ExtractEnergies.py<br>
 &emsp;ExtractProperties.py<br>
 
 <h3>Analysis Tools for Already Trained Models</h3>
