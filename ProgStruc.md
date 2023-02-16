@@ -47,12 +47,16 @@ Encoding Dictionaries detail what each feature column refers to.
 &emsp;DictionaryMaker_AA.py
     
 <h4>Extracting Encoded Interactions for Machine Learning Input</h4>
-&emsp;ExtractInteractions.py
+&emsp;ExtractInteractions_SepPt1.py<br>
+&emsp;ExtractAnglesAndInts_SepPt1_Portion.py<br>
+&emsp;ExtractAnglesAndInts_Sep5Deg_SepPt1.py<br>
+&emsp;ExtractAnglesAndInts_Sep5Deg_SepPt1_Portion.py<br>
+&emsp;ExtractAnglesAndInts_Sep5Deg_Portion_SepPt1_Portion.py<br>
     
 <h4>Extraction of Energies and Computed Properties</h4>
-&emsp;ExtractEnergies.py
-&emsp;ExtractBondOrder.py
-&emsp;ExtractProperties.py
+&emsp;ExtractEnergies.py<br>
+&emsp;ExtractBondOrder.py<br>
+&emsp;ExtractProperties.py<br>
 
 <h3>Analysis Tools for Already Trained Models</h3>
 
